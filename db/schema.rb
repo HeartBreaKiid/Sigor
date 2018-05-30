@@ -10,7 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180530014711) do
+ActiveRecord::Schema.define(version: 20180530060705) do
+
+  create_table "anteproyectos", force: :cascade do |t|
+    t.string   "nombre"
+    t.string   "objetivo"
+    t.string   "justificacion"
+    t.string   "cronograma"
+    t.string   "descripcionactividad"
+    t.string   "nombreempresa"
+    t.string   "direccionempresa"
+    t.string   "telefonoempresa"
+    t.string   "estatus"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  create_table "pruebas", force: :cascade do |t|
+    t.string   "nombre"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -25,6 +45,10 @@ ActiveRecord::Schema.define(version: 20180530014711) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "tipousuario"
+    t.string   "nombre"
+    t.integer  "planestudio"
+    t.integer  "nocontrol"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

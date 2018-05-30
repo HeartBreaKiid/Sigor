@@ -4,8 +4,28 @@
   <%= devise_error_messages! %>
 
   <div class="field">
+    <%= f.label :nocontrol %><br />
+    <%= f.text_field :nocontrol, autofocus: true, placeholder: "Numero de Control" %>
+  </div>
+
+  <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, placeholder: "Email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre, placeholder: "Nombre" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tipousuario %><br />
+    <%= f.text_field :tipousuario, placeholder: "Tipo usuario" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :planestudio %><br />
+    <%= f.text_field :planestudio, placeholder: "Plan de Estudios" %>
   </div>
 
   <div class="field">
